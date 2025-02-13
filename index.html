@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=, initial-scale=1.0" />
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="lib/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="lib/fancybox/fancybox.css">
+	<link rel="stylesheet" href="lib/aos/aos.css">
+	<link rel="stylesheet" href="css/rs-style.css" />
+	<title>Главная | УЦ Содействие Кадрам</title>
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+		<link rel="stylesheet" href="css/rs-header.css">
+		<script src="js/rs-header.js" defer></script>
+		<header>
+			<div class="rs-header">
+				<div class="rs-header__container">
+					<div class="rs-header__wrapper">
+						<div class="rs-header__logo">
+							<a href="#">
+								<img src="./img/logo.svg" alt="">
+							</a>
+						</div>
+
+						<div class="rs-header__menu menu">
+							<button type="button" class="menu__icon">
+								<span class="menu__icon_text">
+									<span>Меню</span>
+									<span>Закрыть</span>
+								</span>
+							</button>
+
+							<div class="menu__block">
+								<nav class="menu__body">
+									<ul class="menu__list">
+										<li class="menu-item current_menu_item">
+											<a href="#">Главная</a>
+										</li>
+
+										<li class="menu-item menu__dropdown">
+											<a href="#">Каталог программ</a>
+
+											<ul class="menu__dropdown_list" hidden>
+												<li class="menu-item">
+													<a href="#">Продукт 1.1</a>
+												</li>
+
+												<li class="menu-item">
+													<a href="#">Продукт 1.2</a>
+												</li>
+
+												<li class="menu-item menu__dropdown">
+													<a href="#">Продукт 1.3</a>
+
+													<ul class="menu__dropdown_list" hidden>
+														<li class="menu-item">
+															<a href="#">Продукт 2.1</a>
+														</li>
+
+														<li class="menu-item menu__dropdown">
+															<a href="#">Продукт 2.2</a>
+
+															<ul class="menu__dropdown_list" hidden>
+																<li class="menu-item">
+																	<a href="#">Продукт 3.1</a>
+																</li>
+
+																<li class="menu-item">
+																	<a href="#">Продукт 3.2</a>
+																</li>
+
+																<li class="menu-item">
+																	<a href="#">Продукт 3.3</a>
+																</li>
+															</ul>
+														</li>
+
+														<li class="menu-item">
+															<a href="#">Продукт 2.3</a>
+														</li>
+													</ul>
+												</li>
+
+												<li class="menu-item">
+													<a href="#">Продукт 1.3</a>
+												</li>
+											</ul>
+										</li>
+
+										<li class="menu-item">
+											<a href="#">О нас</a>
+										</li>
+
+										<li class="menu-item">
+											<a href="#">Информация</a>
+										</li>
+
+										<li class="menu-item">
+											<a href="#">Отзывы</a>
+										</li>
+
+										<li class="menu-item">
+											<a href="#">Контакты</a>
+										</li>
+									</ul>
+								</nav>
+
+								<div class="rs-header__search search">
+									<div class="search__wrapper">
+										<form action="#" class="search__form">
+											<div class="search__block">
+												<div class="search__line">
+													<input type="text" name="form[]" placeholder="Введите текст"
+														required class="search__input">
+
+													<button type="submit" class="search__submit">
+														<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M12.374 12.3876L17.0002 17M14.3335 7.66667C14.3335 11.3486 11.3487 14.3333 7.66685 14.3333C3.98495 14.3333 1.00018 11.3486 1.00018 7.66667C1.00018 3.98477 3.98495 1 7.66685 1C11.3487 1 14.3335 3.98477 14.3335 7.66667Z"
+																stroke="white" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+														</svg>
+													</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="menu__contact">
+									<h6>Свяжитесь с нами</h6>
+									<ul class="menu__list">
+										<li class="menu-item">
+											<a href="tel:70000000000">
+												<svg width="14" height="15" viewBox="0 0 14 15" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M0 2.44444C0 9.10254 5.39746 14.5 12.0556 14.5C12.3559 14.5 12.6538 14.489 12.9487 14.4674C13.2871 14.4426 13.4563 14.4302 13.6103 14.3416C13.7379 14.2681 13.8589 14.1379 13.9228 14.0053C14 13.8453 14 13.6585 14 13.2851V11.0939C14 10.7798 14 10.6228 13.9483 10.4882C13.9027 10.3693 13.8285 10.2634 13.7324 10.1799C13.6235 10.0853 13.476 10.0317 13.1808 9.92434L10.6866 9.01736C10.3433 8.8925 10.1716 8.83007 10.0087 8.84066C9.86505 8.85001 9.72682 8.89903 9.6094 8.98227C9.47622 9.07666 9.38223 9.23332 9.19425 9.54662L8.55556 10.6111C6.49455 9.6777 4.8237 8.00468 3.88889 5.94444L4.95338 5.30575C5.26668 5.11777 5.42334 5.02378 5.51773 4.8906C5.60097 4.77318 5.64999 4.63495 5.65934 4.49132C5.66993 4.32843 5.6075 4.15674 5.48264 3.81337L4.57566 1.31916C4.46834 1.02404 4.41468 0.87647 4.3201 0.767631C4.23657 0.671491 4.1307 0.597338 4.0118 0.551684C3.87719 0.5 3.72017 0.5 3.40614 0.5H1.2149C0.841461 0.5 0.654742 0.5 0.49465 0.577197C0.362057 0.641133 0.231885 0.762122 0.158435 0.889692C0.0697527 1.04372 0.0573619 1.21293 0.0325804 1.55134C0.0109868 1.84622 0 2.14405 0 2.44444Z"
+														fill="var(--primary-color)" />
+												</svg>
+												+7 (000) 000-00-00
+											</a>
+										</li>
+
+										<li class="menu-item">
+											<a href="tel:+70000000000">
+												<svg width="14" height="15" viewBox="0 0 14 15" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M0 2.44444C0 9.10254 5.39746 14.5 12.0556 14.5C12.3559 14.5 12.6538 14.489 12.9487 14.4674C13.2871 14.4426 13.4563 14.4302 13.6103 14.3416C13.7379 14.2681 13.8589 14.1379 13.9228 14.0053C14 13.8453 14 13.6585 14 13.2851V11.0939C14 10.7798 14 10.6228 13.9483 10.4882C13.9027 10.3693 13.8285 10.2634 13.7324 10.1799C13.6235 10.0853 13.476 10.0317 13.1808 9.92434L10.6866 9.01736C10.3433 8.8925 10.1716 8.83007 10.0087 8.84066C9.86505 8.85001 9.72682 8.89903 9.6094 8.98227C9.47622 9.07666 9.38223 9.23332 9.19425 9.54662L8.55556 10.6111C6.49455 9.6777 4.8237 8.00468 3.88889 5.94444L4.95338 5.30575C5.26668 5.11777 5.42334 5.02378 5.51773 4.8906C5.60097 4.77318 5.64999 4.63495 5.65934 4.49132C5.66993 4.32843 5.6075 4.15674 5.48264 3.81337L4.57566 1.31916C4.46834 1.02404 4.41468 0.87647 4.3201 0.767631C4.23657 0.671491 4.1307 0.597338 4.0118 0.551684C3.87719 0.5 3.72017 0.5 3.40614 0.5H1.2149C0.841461 0.5 0.654742 0.5 0.49465 0.577197C0.362057 0.641133 0.231885 0.762122 0.158435 0.889692C0.0697527 1.04372 0.0573619 1.21293 0.0325804 1.55134C0.0109868 1.84622 0 2.14405 0 2.44444Z"
+														fill="var(--primary-color)" />
+												</svg>
+												+7 (000) 000-00-00
+											</a>
+										</li>
+
+										<li class="menu-item">
+											<a href="mailto:mail@mail.ru">
+												<svg width="14" height="15" viewBox="0 0 14 15" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M0.0433872 3.8106C0.220264 3.06019 0.917196 2.5 1.75 2.5H12.25C13.0828 2.5 13.7797 3.06019 13.9566 3.8106L7 7.90441L0.0433872 3.8106ZM0 4.77254V10.7579L5.0778 7.76071L0 4.77254ZM5.91623 8.25411L0.167887 11.6471C0.448529 12.217 1.05147 12.6111 1.75 12.6111H12.25C12.9485 12.6111 13.5515 12.217 13.8321 11.6471L8.08377 8.25411L7 8.89188L5.91623 8.25411ZM8.9222 7.76071L14 10.7579V4.77254L8.9222 7.76071Z"
+														fill="var(--primary-color)" />
+												</svg>
+
+												mail@mail.ru
+											</a>
+										</li>
+									</ul>
+									<a href="#" class="rs-btn _btn-primary-opacity">Получить консультацию</a>
+								</div>
+
+								<div class="menu__action">
+									<ul class="menu__list">
+										<li class="menu-item">
+											<a href="#">
+												<svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path opacity="0.2"
+														d="M9 11.75C11.4853 11.75 13.5 9.73528 13.5 7.25C13.5 4.76472 11.4853 2.75 9 2.75C6.51472 2.75 4.5 4.76472 4.5 7.25C4.5 9.73528 6.51472 11.75 9 11.75Z"
+														fill="var(--primary-color)" />
+													<path
+														d="M9 11.75C11.4853 11.75 13.5 9.73528 13.5 7.25C13.5 4.76472 11.4853 2.75 9 2.75C6.51472 2.75 4.5 4.76472 4.5 7.25C4.5 9.73528 6.51472 11.75 9 11.75Z"
+														stroke="var(--primary-color)" stroke-width="2"
+														stroke-miterlimit="10" />
+													<path
+														d="M2.17896 15.6868C2.87052 14.4898 3.86492 13.4959 5.06225 12.8048C6.25958 12.1138 7.61768 11.75 9.00012 11.75C10.3826 11.75 11.7407 12.1138 12.938 12.8049C14.1353 13.496 15.1297 14.4899 15.8212 15.687"
+														stroke="var(--primary-color)" stroke-width="2"
+														stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+												Войти
+											</a>
+										</li>
+									</ul>
+								</div>
+
+								<div class="menu__social">
+									<ul class="menu__list">
+										<li class="menu_item">
+											<a href="#">
+												<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd"
+														d="M9.00047 18C7.30353 17.9957 5.64284 17.5079 4.21229 16.5933L0.00012207 18L1.40423 13.7789C0.346398 12.0877 -0.120381 10.0922 0.0774689 8.10618C0.275318 6.12021 1.12658 4.25647 2.49719 2.80806C3.86781 1.35965 5.67999 0.408758 7.64895 0.104919C9.61793 -0.198919 11.6319 0.161516 13.3741 1.12959C15.1162 2.09766 16.4877 3.61838 17.2729 5.45265C18.0581 7.28692 18.2124 9.33069 17.7117 11.2624C17.2109 13.1942 16.0834 14.9043 14.5065 16.1239C12.9295 17.3436 10.9927 18.0036 9.00047 18ZM10.9566 10.3489C11.5552 10.5429 12.1642 10.7035 12.7806 10.8298C12.8455 10.8394 12.9077 10.8619 12.9636 10.8961C13.0195 10.9304 13.068 10.9755 13.1062 11.029C13.1442 11.0824 13.1712 11.143 13.1854 11.2071C13.1995 11.2712 13.2006 11.3375 13.1886 11.4021V11.7483C13.1946 11.8719 13.1717 11.9952 13.1217 12.1082C13.0717 12.2214 12.9959 12.3212 12.9006 12.3999C12.6048 12.7007 12.2547 12.9422 11.8686 13.1117C11.2991 13.1795 10.7217 13.1292 10.1725 12.9637C9.62335 12.7982 9.11408 12.5211 8.67643 12.1499C8.11218 11.7706 7.5858 11.3379 7.10445 10.8575C6.62538 10.3728 6.19146 9.84514 5.80831 9.28127C5.44064 8.84255 5.16686 8.33288 5.00378 7.78383C4.84071 7.23478 4.79192 6.65807 4.86037 6.08936C5.02973 5.7048 5.26989 5.35563 5.56836 5.06022C5.6444 4.96278 5.74338 4.8858 5.8565 4.83626C5.96964 4.78672 6.09339 4.76617 6.21643 4.77645H6.56434C6.6956 4.7583 6.82879 4.79301 6.93452 4.87303C7.04025 4.95303 7.10988 5.07184 7.12833 5.2033C7.30833 5.91504 7.44038 6.42959 7.62039 7.00667C7.69239 7.24712 7.60848 7.3048 7.41648 7.44908C7.29646 7.54165 7.20045 7.60899 7.10445 7.67992C7.04877 7.7042 6.99882 7.73991 6.95781 7.78478C6.91681 7.82966 6.88564 7.88265 6.86641 7.94035C6.84717 7.99805 6.84019 8.05921 6.84604 8.11976C6.8519 8.18031 6.87045 8.2389 6.90039 8.29184C7.20686 8.88275 7.59912 9.42488 8.06441 9.90045C8.53843 10.3675 9.08077 10.7595 9.67256 11.063C9.72554 11.0925 9.78392 11.1107 9.84426 11.1163C9.90458 11.122 9.96545 11.115 10.023 11.0959C10.0805 11.0768 10.1335 11.046 10.1785 11.0054C10.2236 10.9648 10.2595 10.9152 10.2845 10.8598C10.3565 10.7624 10.4165 10.6711 10.5125 10.546C10.5275 10.5028 10.551 10.4631 10.5817 10.4291C10.6123 10.3952 10.6495 10.3679 10.691 10.3487C10.7324 10.3295 10.7773 10.3189 10.823 10.3175C10.8686 10.3161 10.914 10.3239 10.9566 10.3405V10.3489Z"
+														fill="var(--primary-color)" />
+												</svg>
+											</a>
+										</li>
+										<li class="menu_item">
+											<a href="#">
+												<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd"
+														d="M15.4093 15.8033C15.3855 16.0504 15.2859 16.2851 15.1231 16.477C14.9605 16.6689 14.7421 16.8093 14.4962 16.8798C14.2504 16.9504 13.9883 16.948 13.7438 16.8731C13.4992 16.7983 13.2835 16.6541 13.1243 16.4594C11.7252 15.3833 9.54315 13.8323 9.54315 13.8323C9.54315 13.8323 7.96419 16.5253 7.6818 16.8011C7.58851 16.877 7.47992 16.9333 7.36293 16.9663C7.24594 16.9991 7.12315 17.0081 7.00237 16.9926C6.88159 16.977 6.76544 16.9373 6.66142 16.8759C6.55739 16.8145 6.46775 16.7328 6.39817 16.6359C6.38377 16.5935 6.36672 16.5519 6.34693 16.5115L7.23256 12.2218L13.5481 6.21581L4.93481 10.9741C4.93481 10.9741 1.04545 9.84819 0.467822 9.62824C0.318812 9.54944 0.195933 9.43139 0.113382 9.28775C0.0308327 9.14411 -0.0078995 8.98078 0.00150384 8.81666C0.0109072 8.65254 0.0680489 8.49435 0.166501 8.36043C0.264954 8.22651 0.400666 8.12235 0.557763 8.05999C1.37928 7.65488 15.8714 2.29632 16.3592 2.15838C16.8469 2.02044 18.1305 1.66129 17.9893 2.87044C17.8482 4.07959 15.5505 15.1384 15.4093 15.8033Z"
+														fill="var(--primary-color)" />
+												</svg>
+											</a>
+										</li>
+										<li class="menu_item">
+											<a href="#" class="rs-btn _btn-gray">Консалтинговые услуги</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="rs-header__action">
+							<ul>
+								<li>
+									<a href="#">
+										<svg width="13" height="14" viewBox="0 0 13 14" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M4.99716 12.3333C5.17397 12.3333 5.34354 12.4035 5.46856 12.5286C5.59359 12.6536 5.66382 12.8232 5.66382 13C5.66382 13.1768 5.59359 13.3463 5.46856 13.4714C5.34354 13.5964 5.17397 13.6666 4.99716 13.6666C4.82035 13.6666 4.65078 13.5964 4.52575 13.4714C4.40073 13.3463 4.33049 13.1768 4.33049 13C4.33049 12.8232 4.40073 12.6536 4.52575 12.5286C4.65078 12.4035 4.82035 12.3333 4.99716 12.3333ZM9.66383 12.3333C9.84064 12.3333 10.0102 12.4035 10.1352 12.5286C10.2603 12.6536 10.3305 12.8232 10.3305 13C10.3305 13.1768 10.2603 13.3463 10.1352 13.4714C10.0102 13.5964 9.84064 13.6666 9.66383 13.6666C9.48701 13.6666 9.31744 13.5964 9.19242 13.4714C9.0674 13.3463 8.99716 13.1768 8.99716 13C8.99716 12.8232 9.0674 12.6536 9.19242 12.5286C9.31744 12.4035 9.48701 12.3333 9.66383 12.3333ZM1.32716 0.753963L1.39716 0.800629L2.53582 1.65396C2.7296 1.79936 2.8801 1.9948 2.97116 2.2193L3.01116 2.3333H11.5752C11.7559 2.33325 11.9348 2.36995 12.1009 2.44117C12.267 2.51238 12.4169 2.61663 12.5415 2.74757C12.6661 2.87851 12.7627 3.03342 12.8256 3.20287C12.8884 3.37232 12.9162 3.55278 12.9072 3.7333L12.8985 3.83196L12.5938 6.26863C12.5024 7.00191 12.1699 7.68403 11.6486 8.20776C11.1272 8.73149 10.4467 9.06714 9.71383 9.16196L9.56316 9.17729L4.68783 9.58396L4.86116 10.3333H10.6638C10.8337 10.3335 10.9972 10.3985 11.1207 10.5152C11.2443 10.6318 11.3186 10.7913 11.3286 10.9609C11.3386 11.1305 11.2834 11.2975 11.1743 11.4279C11.0653 11.5582 10.9106 11.6419 10.7418 11.662L10.6638 11.6666H4.86116C4.57823 11.6667 4.30262 11.5767 4.07419 11.4098C3.84576 11.2428 3.67636 11.0075 3.59049 10.738L3.56182 10.6333L1.73516 2.71996L0.597158 1.86663C0.467089 1.76914 0.377118 1.62749 0.344166 1.46832C0.311214 1.30915 0.337551 1.14342 0.418224 1.0023C0.498896 0.861187 0.628346 0.754407 0.782229 0.702043C0.936112 0.64968 1.10382 0.655341 1.25382 0.717963L1.32716 0.753963ZM11.5752 3.66663H3.32182L4.38516 8.27063L9.45183 7.84863C9.90911 7.81058 10.3394 7.61645 10.6705 7.29879C11.0017 6.98113 11.2135 6.55927 11.2705 6.10396L11.5752 3.66663Z"
+												fill="var(--primary-color)" />
+										</svg>
+										Корзина
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M8 8.66669C9.59733 8.66669 11.05 9.12935 12.1187 9.78135C12.652 10.1067 13.108 10.4907 13.4373 10.908C13.7613 11.318 14 11.8087 14 12.3334C14 12.8967 13.726 13.3407 13.3313 13.6574C12.958 13.9574 12.4653 14.156 11.942 14.2947C10.89 14.5727 9.486 14.6667 8 14.6667C6.514 14.6667 5.11 14.5734 4.058 14.2947C3.53467 14.156 3.042 13.9574 2.66867 13.6574C2.27333 13.34 2 12.8967 2 12.3334C2 11.8087 2.23867 11.318 2.56267 10.9074C2.892 10.4907 3.34733 10.1074 3.88133 9.78069C4.95 9.13002 6.40333 8.66669 8 8.66669ZM8 10C6.65133 10 5.438 10.3934 4.576 10.9194C4.14467 11.182 3.81933 11.4674 3.60933 11.734C3.39333 12.0074 3.33333 12.214 3.33333 12.3334C3.33333 12.4147 3.358 12.5007 3.50333 12.6174C3.66933 12.7507 3.958 12.8887 4.39933 13.0054C5.278 13.2387 6.54067 13.3334 8 13.3334C9.46 13.3334 10.722 13.238 11.6 13.0054C12.042 12.8887 12.3307 12.7507 12.4967 12.6174C12.642 12.5007 12.6667 12.4147 12.6667 12.3334C12.6667 12.2134 12.6067 12.0074 12.3913 11.734C12.1807 11.4674 11.8553 11.182 11.424 10.9194C10.562 10.3927 9.34867 10 8 10ZM8 1.33335C8.88406 1.33335 9.7319 1.68454 10.357 2.30967C10.9821 2.93479 11.3333 3.78263 11.3333 4.66669C11.3333 5.55074 10.9821 6.39859 10.357 7.02371C9.7319 7.64883 8.88406 8.00002 8 8.00002C7.11595 8.00002 6.2681 7.64883 5.64298 7.02371C5.01786 6.39859 4.66667 5.55074 4.66667 4.66669C4.66667 3.78263 5.01786 2.93479 5.64298 2.30967C6.2681 1.68454 7.11595 1.33335 8 1.33335ZM8 2.66669C7.73736 2.66669 7.47728 2.71842 7.23463 2.81893C6.99198 2.91944 6.7715 3.06676 6.58579 3.25247C6.40007 3.43819 6.25275 3.65867 6.15224 3.90132C6.05173 4.14397 6 4.40404 6 4.66669C6 4.92933 6.05173 5.1894 6.15224 5.43206C6.25275 5.67471 6.40007 5.89518 6.58579 6.0809C6.7715 6.26662 6.99198 6.41394 7.23463 6.51445C7.47728 6.61496 7.73736 6.66669 8 6.66669C8.53043 6.66669 9.03914 6.45598 9.41421 6.0809C9.78929 5.70583 10 5.19712 10 4.66669C10 4.13626 9.78929 3.62755 9.41421 3.25247C9.03914 2.8774 8.53043 2.66669 8 2.66669Z"
+												fill="var(--primary-color)" />
+										</svg>
+										Войти
+									</a>
+								</li>
+								<li><a href="#" class="rs-btn _btn-gray">Консалтинговые услуги</a></li>
+								<li><a href="#" class="rs-btn _btn-primary-opacity">Получить консультацию</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page">
+
+			<link rel="stylesheet" href="css/rs-slider.css">
+			<section class="rs-slider">
+				<div class="rs-slider__bg">
+					<img src="./img/slider_bg.png" alt="">
+				</div>
+				<div class="rs-slider__container">
+					<div class="rs-slider__wrapper">
+						<div class="rs-slider__slider swiper">
+							<div class="rs-slider__swiper swiper-wrapper">
+								<div class="rs-slider__slide swiper-slide">
+									<div class="rs-slider__content">
+										<div class="rs-slider__title">
+											<h1><span class="cursive">Ваш шаг</span> к новой профессии!</h1>
+										</div>
+
+										<div class="rs-slider__img">
+											<img src="./img/slider_img-1.png" alt="">
+										</div>
+
+										<div class="rs-slider__desc">
+											<p>Запишитесь сейчас – и получите востребованную специальность без отрыва от
+												работы</p>
+
+											<div class="rs-slider__buttons">
+												<a href="#" class="rs-btn _btn-second">
+													<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M13 2.16666C13.221 2.16666 13.433 2.25445 13.5893 2.41073C13.7456 2.56701 13.8334 2.77898 13.8334 2.99999V9.66666C13.8334 9.88767 13.7456 10.0996 13.5893 10.2559C13.433 10.4122 13.221 10.5 13 10.5C12.779 10.5 12.5671 10.4122 12.4108 10.2559C12.2545 10.0996 12.1667 9.88767 12.1667 9.66666V5.01166L3.87503 13.3033C3.71786 13.4551 3.50736 13.5391 3.28886 13.5372C3.07036 13.5353 2.86135 13.4477 2.70685 13.2932C2.55234 13.1387 2.4647 12.9297 2.4628 12.7112C2.4609 12.4927 2.5449 12.2822 2.6967 12.125L10.9884 3.83332H6.33336C6.11235 3.83332 5.90039 3.74553 5.74411 3.58925C5.58783 3.43297 5.50003 3.221 5.50003 2.99999C5.50003 2.77898 5.58783 2.56701 5.74411 2.41073C5.90039 2.25445 6.11235 2.16666 6.33336 2.16666H13Z"
+															fill="white" />
+													</svg>
+												</a>
+												<a href="#" class="rs-btn _btn-second">Заявка на обучение</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="rs-slider__slide swiper-slide">
+									<div class="rs-slider__content">
+										<div class="rs-slider__title">
+											<h1><span class="cursive">Повышение</span> квалификации за считанные дни!
+											</h1>
+										</div>
+
+										<div class="rs-slider__img">
+											<img src="./img/slider_img-2.png" alt="">
+										</div>
+
+										<div class="rs-slider__desc">
+											<p>Удобный дистанционный формат и оперативная выдача документов
+											</p>
+
+											<div class="rs-slider__buttons">
+												<a href="#" class="rs-btn _btn-second">
+													<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M13 2.16666C13.221 2.16666 13.433 2.25445 13.5893 2.41073C13.7456 2.56701 13.8334 2.77898 13.8334 2.99999V9.66666C13.8334 9.88767 13.7456 10.0996 13.5893 10.2559C13.433 10.4122 13.221 10.5 13 10.5C12.779 10.5 12.5671 10.4122 12.4108 10.2559C12.2545 10.0996 12.1667 9.88767 12.1667 9.66666V5.01166L3.87503 13.3033C3.71786 13.4551 3.50736 13.5391 3.28886 13.5372C3.07036 13.5353 2.86135 13.4477 2.70685 13.2932C2.55234 13.1387 2.4647 12.9297 2.4628 12.7112C2.4609 12.4927 2.5449 12.2822 2.6967 12.125L10.9884 3.83332H6.33336C6.11235 3.83332 5.90039 3.74553 5.74411 3.58925C5.58783 3.43297 5.50003 3.221 5.50003 2.99999C5.50003 2.77898 5.58783 2.56701 5.74411 2.41073C5.90039 2.25445 6.11235 2.16666 6.33336 2.16666H13Z"
+															fill="white" />
+													</svg>
+												</a>
+												<a href="#" class="rs-btn _btn-second">Заявка на обучение</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="rs-slider__slide swiper-slide">
+									<div class="rs-slider__content">
+										<div class="rs-slider__title">
+											<h1><span class="cursive">Не откладывайте</span> успех на завтра!</h1>
+										</div>
+
+										<div class="rs-slider__img">
+											<img src="./img/slider_img-1.png" alt="">
+										</div>
+
+										<div class="rs-slider__desc">
+											<p>Выбирайте программу прямо сейчас и двигайтесь к своей цели без
+												промедлений </p>
+
+											<div class="rs-slider__buttons">
+												<a href="#" class="rs-btn _btn-second">
+													<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M13 2.16666C13.221 2.16666 13.433 2.25445 13.5893 2.41073C13.7456 2.56701 13.8334 2.77898 13.8334 2.99999V9.66666C13.8334 9.88767 13.7456 10.0996 13.5893 10.2559C13.433 10.4122 13.221 10.5 13 10.5C12.779 10.5 12.5671 10.4122 12.4108 10.2559C12.2545 10.0996 12.1667 9.88767 12.1667 9.66666V5.01166L3.87503 13.3033C3.71786 13.4551 3.50736 13.5391 3.28886 13.5372C3.07036 13.5353 2.86135 13.4477 2.70685 13.2932C2.55234 13.1387 2.4647 12.9297 2.4628 12.7112C2.4609 12.4927 2.5449 12.2822 2.6967 12.125L10.9884 3.83332H6.33336C6.11235 3.83332 5.90039 3.74553 5.74411 3.58925C5.58783 3.43297 5.50003 3.221 5.50003 2.99999C5.50003 2.77898 5.58783 2.56701 5.74411 2.41073C5.90039 2.25445 6.11235 2.16666 6.33336 2.16666H13Z"
+															fill="white" />
+													</svg>
+												</a>
+												<a href="#" class="rs-btn _btn-second">Заявка на обучение</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="rs-slider__label">
+							<div class="rs-slider__label_img">
+								<img src="./img/slider_group-1.png" alt="">
+							</div>
+							<div class="rs-slider__label_desc">
+								<h4>Более 500 </h4>
+								<p>программ обучения для рабочих специальностей и повышения квалификации</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<link rel="stylesheet" href="css/rs-about.css">
+			<section class="rs-about">
+				<div class="rs-about__container">
+					<div class="rs-about__wrapper">
+						<div class="rs-about__row">
+							<div class="rs-about__desc">
+								<h2><span class="cursive">Учебный центр </span>«Содействие Кадрам»</h2>
+								<p>Наша миссия – помочь вам стать востребованным специалистом! Мы предлагаем обучение по
+									всем рабочим специальностям согласно справочнику ЕКТС. Охрана труда, пожарная
+									безопасность, аттестация по электробезопасности и промбезопасности – всё это
+									доступно у нас. Наши программы разработаны с учётом современных стандартов, а
+									дистанционный формат обучения позволяет вам учиться из любого уголка России.</p>
+								<p>После успешного прохождения курсов вы получите официальные документы, которые мы
+									оперативно доставим по всей стране. Обучение в «Содействие Кадрам» – это шаг вперёд
+									в карьере! Мы гарантируем индивидуальный подход, удобные графики занятий и поддержку
+									на каждом этапе.</p>
+							</div>
+
+							<div class="rs-about__block">
+								<div class="rs-about__block_bg">
+									<img src="./img/about_img-1.png" alt="">
+								</div>
+								<div class="rs-about__block_desc">
+									<div class="rs-about__block_body">
+										<h4>Развивайтесь вместе с нами!</h4>
+										<p>Запишитесь на курс уже сегодня и убедитесь, что обучение может быть
+											комфортным и
+											эффективным. УЦ «Содействие Кадрам» – мы работаем для вашего успеха!</p>
+									</div>
+									<div class="rs-about__block_button">
+										<a href="#" class="rs-btn _btn-second">Узнать подробнее</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="rs-about__list">
+							<div class="rs-about__list_item">
+								<img src="./img/about_pattern-1.png" alt="">
+							</div>
+							<div class="rs-about__list_item">
+								<div class="rs-about__list_img">
+									<img src="./img/about_icon-1.svg" alt="">
+								</div>
+								<div class="rs-about__list_desc">
+									<h4>Обучение дистанционно</h4>
+									<p>Учитесь из любого региона России – доступ к материалам 24/7, без выезда</p>
+								</div>
+							</div>
+							<div class="rs-about__list_item">
+								<img src="./img/about_pattern-1.png" alt="">
+							</div>
+							<div class="rs-about__list_item">
+								<div class="rs-about__list_img">
+									<img src="./img/about_icon-2.svg" alt="">
+								</div>
+								<div class="rs-about__list_desc">
+									<h4>Документы быстро</h4>
+									<p>Оперативная доставка удостоверений и сертификатов по всей России удобным для вас
+										способом</p>
+								</div>
+							</div>
+							<div class="rs-about__list_item">
+								<img src="./img/about_pattern-2.png" alt="">
+							</div>
+							<div class="rs-about__list_item">
+								<div class="rs-about__list_img">
+									<img src="./img/about_icon-3.svg" alt="">
+								</div>
+								<div class="rs-about__list_desc">
+									<h4>Комплексный подход</h4>
+									<p>Обучение, аттестации, повышение квалификации – всё в одном месте</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<link rel="stylesheet" href="css/rs-services.css">
+			<section class="rs-services">
+				<div class="rs-services__container">
+					<div class="rs-services__wrapper">
+						<div class="section-header">
+							<div class="section-header__icon">
+								<img src="./img/section-head_icon-1.svg" alt="">
+							</div>
+							<div class="section-header__title">
+								<h2>Выберите программу обучения <span class="cursive">для успешной карьеры!</span></h2>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-1.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Профессиональная переподготовка</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-2.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Оказание первой помощи</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-3.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Обучение рабочим профессиям</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-4.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Экологическая безопасность</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-5.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Обучение к лицензии МЧС</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-6.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Радиационная безопасность</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-7.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Пожарная безопасность</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-8.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Подготовка членов добровольных пожарных дружин</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-9.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Промышленная безопасность</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-10.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Безопасность на транспорте</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-11.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Проверка знаний по электробезопасности и тепловым энергоустановкам</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-12.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Безопасность подъёмных сооружений</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-13.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Гражданская оборона и защита от ЧС</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-14.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Социальные проекты</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-15.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Повышение квалификации</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-16.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Аттестация проектировщиков по пожарной безопасности</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-17.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Безопасность работ на высоте</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-18.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Внесение документов в ФИС ФРДО</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-19.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Работы в ограниченных и замкнутых пространствах</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-20.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Курсы целевого назначения (КЦН)</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-21.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Обучение по охране труда</h4>
+							</div>
+						</div>
+
+						<div class="rs-services__item">
+							<div class="rs-services__img">
+								<img src="./img/services_icon-22.svg" alt="">
+							</div>
+							<div class="rs-services__desc">
+								<h4>Правовые основы деятельности медицинских работников</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<link rel="stylesheet" href="css/rs-license.css">
+			<section class="rs-license">
+				<div class="rs-license__container">
+					<div class="rs-license__wrapper">
+						<div class="section-header">
+							<div class="section-header__icon">
+								<img src="./img/section-head_icon-1.svg" alt="">
+							</div>
+							<div class="section-header__title">
+								<h2><span class="cursive">Наши</span> лицензии и аккредитация</h2>
+							</div>
+						</div>
+
+						<div data-tabs class="rs-license__tabs tabs">
+							<nav data-tabs-titles class="tabs__navigation">
+								<button type="button" class="tabs__title _tab-active">Лицензия</button>
+								<button type="button" class="tabs__title">Аккредитация</button>
+								<button type="button" class="tabs__title">Договор с Учебным центром  </button>
+							</nav>
+							<div data-tabs-body class="tabs__content">
+								<div class="tabs__body">
+									<div class="rs-license__content">
+										<div class="rs-license__row">
+											<div class="rs-license__desc">
+												<h3>Государственная лицензия Министерства Образования</h3>
+												<p>Учебный центр «Содействие Кадрам» ведёт образовательную деятельность
+													на основании лицензии, выданной Министерством образования.</p>
+												<h5>Данные лицензии:</h5>
+												<ul>
+													<li>Регистрационный номер: Л987-65432-11/00987654</li>
+													<li>Орган, выдавший лицензию: Департамент образования и науки города
+														Санкт-Петербург</li>
+												</ul>
+												<blockquote>
+													<p>Только учебные центры с действующей государственной лицензией
+														имеют право оказывать образовательные услуги. Для проверки
+														лицензии используйте официальный сайт Министерства образования.
+													</p>
+													<a href="#" class="rs-btn _btn-second">Проверить лицензию</a>
+												</blockquote>
+											</div>
+
+											<div class="rs-license__img">
+												<a href="./img/license_img-1.jpg" data-fancybox="license-1">
+													<img src="./img/license_img-1.jpg" alt="">
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="tabs__body">
+									<div class="rs-license__content">
+										<div class="rs-license__row">
+											<div class="rs-license__desc">
+												<h3>Государственная лицензия Министерства Образования</h3>
+												<p>Учебный центр «Содействие Кадрам» ведёт образовательную деятельность
+													на основании лицензии, выданной Министерством образования.</p>
+												<h5>Данные лицензии:</h5>
+												<ul>
+													<li>Регистрационный номер: Л987-65432-11/00987654</li>
+													<li>Орган, выдавший лицензию: Департамент образования и науки города
+														Санкт-Петербург</li>
+												</ul>
+												<blockquote>
+													<p>Только учебные центры с действующей государственной лицензией
+														имеют право оказывать образовательные услуги. Для проверки
+														лицензии используйте официальный сайт Министерства образования.
+													</p>
+													<a href="#" class="rs-btn _btn-second">Проверить лицензию</a>
+												</blockquote>
+											</div>
+
+											<div class="rs-license__img">
+												<a href="./img/license_img-1.jpg" data-fancybox="license-1">
+													<img src="./img/license_img-1.jpg" alt="">
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="tabs__body">
+									<div class="rs-license__content">
+										<div class="rs-license__row">
+											<div class="rs-license__desc">
+												<h3>Государственная лицензия Министерства Образования</h3>
+												<p>Учебный центр «Содействие Кадрам» ведёт образовательную деятельность
+													на основании лицензии, выданной Министерством образования.</p>
+												<h5>Данные лицензии:</h5>
+												<ul>
+													<li>Регистрационный номер: Л987-65432-11/00987654</li>
+													<li>Орган, выдавший лицензию: Департамент образования и науки города
+														Санкт-Петербург</li>
+												</ul>
+												<blockquote>
+													<p>Только учебные центры с действующей государственной лицензией
+														имеют право оказывать образовательные услуги. Для проверки
+														лицензии используйте официальный сайт Министерства образования.
+													</p>
+													<a href="#" class="rs-btn _btn-second">Проверить лицензию</a>
+												</blockquote>
+											</div>
+
+											<div class="rs-license__img">
+												<a href="./img/license_img-1.jpg" data-fancybox="license-1">
+													<img src="./img/license_img-1.jpg" alt="">
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<link rel="stylesheet" href="css/rs-text-block.css">
+			<section class="rs-text-block">
+				<div class="rs-text-block__container">
+					<div class="rs-text-block__wrapper">
+						<div class="rs-text-block__row">
+							<div class="rs-text-block__desc">
+								<h2><span class="cursive">Проверка</span> достоверности удостоверений</h2>
+								<p>Наш сервис позволяет проверить данные о вашем удостоверении, зарегистрированном в
+									единой информационной системе Учебного центра «Содействие Кадрам».</p>
+								<h5>Цели работы сервиса:</h5>
+								<ul>
+									<li>исключение из обращения поддельных и недействительных документов;</li>
+									<li>обеспечение работодателей проверенной информацией о квалификации сотрудников и
+										кандидатов;</li>
+									<li>квалификации сотрудников и кандидатов;</li>
+									<li>повышение качества образования через предоставление достоверных данных.</li>
+								</ul>
+								<div class="rs-text-block__buttons">
+									<a href="#" class="rs-btn _btn-second">
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M13 2.16666C13.221 2.16666 13.433 2.25445 13.5893 2.41073C13.7456 2.56701 13.8334 2.77898 13.8334 2.99999V9.66666C13.8334 9.88767 13.7456 10.0996 13.5893 10.2559C13.433 10.4122 13.221 10.5 13 10.5C12.779 10.5 12.5671 10.4122 12.4108 10.2559C12.2545 10.0996 12.1667 9.88767 12.1667 9.66666V5.01166L3.87503 13.3033C3.71786 13.4551 3.50736 13.5391 3.28886 13.5372C3.07036 13.5353 2.86135 13.4477 2.70685 13.2932C2.55234 13.1387 2.4647 12.9297 2.4628 12.7112C2.4609 12.4927 2.5449 12.2822 2.6967 12.125L10.9884 3.83332H6.33336C6.11235 3.83332 5.90039 3.74553 5.74411 3.58925C5.58783 3.43297 5.50003 3.221 5.50003 2.99999C5.50003 2.77898 5.58783 2.56701 5.74411 2.41073C5.90039 2.25445 6.11235 2.16666 6.33336 2.16666H13Z"
+												fill="white" />
+										</svg>
+									</a>
+									<a href="#" class="rs-btn _btn-second">Проверить удостоверение</a>
+								</div>
+							</div>
+
+							<div class="rs-text-block__img">
+								<img src="./img/about_img-2.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<link rel="stylesheet" href="css/rs-reviews.css">
+			<section class="rs-reviews">
+				<div class="rs-reviews__container">
+					<div class="rs-reviews__head">
+						<div class="section-header">
+							<div class="section-header__icon">
+								<img src="./img/section-head_icon-3.svg" alt="">
+							</div>
+							<div class="section-header__title">
+								<h2><span class="cursive">Наши</span> лицензии и аккредитация</h2>
+							</div>
+						</div>
+
+						<div class="rs-reviews__navigation swiper-navigation">
+							<div class="rs-reviews__buttons swiper-buttons">
+								<div class="rs-reviews__button-prev swiper-button-prev">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M1.0699 10.5393C0.878888 10.3483 0.77158 10.0892 0.77158 9.81906C0.77158 9.54893 0.878888 9.28987 1.0699 9.09886L6.83151 3.33725C7.02252 3.14624 7.28158 3.03893 7.55171 3.03893C7.82184 3.03893 8.0809 3.14624 8.27191 3.33725C8.46292 3.52825 8.57023 3.78732 8.57023 4.05745C8.57023 4.32757 8.46292 4.58664 8.27191 4.77765L4.24887 8.80069L18.5809 8.80069C18.8479 8.80533 19.1024 8.91466 19.2896 9.10514C19.4768 9.29561 19.5817 9.55199 19.5817 9.81906C19.5817 10.0861 19.4768 10.3425 19.2896 10.533C19.1024 10.7234 18.8479 10.8328 18.5809 10.8374L4.24887 10.8374L8.27191 14.8605C8.46292 15.0515 8.57023 15.3105 8.57023 15.5807C8.57023 15.8508 8.46292 16.1099 8.27191 16.3009C8.0809 16.4919 7.82184 16.5992 7.55171 16.5992C7.28158 16.5992 7.02252 16.4919 6.83151 16.3009L1.0699 10.5393Z"
+											fill="#202020" />
+									</svg>
+								</div>
+								<div class="rs-reviews__button-next swiper-button-next">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M19.2854 9.09893C19.4765 9.28994 19.5838 9.549 19.5838 9.81913C19.5838 10.0893 19.4765 10.3483 19.2854 10.5393L13.5238 16.3009C13.3328 16.4919 13.0738 16.5993 12.8036 16.5993C12.5335 16.5993 12.2744 16.4919 12.0834 16.3009C11.8924 16.1099 11.7851 15.8509 11.7851 15.5807C11.7851 15.3106 11.8924 15.0515 12.0834 14.8605L16.1065 10.8375L1.77447 10.8375C1.50745 10.8329 1.25293 10.7235 1.06574 10.533C0.878547 10.3426 0.773655 10.0862 0.773655 9.81913C0.773655 9.55206 0.878548 9.29569 1.06574 9.10521C1.25294 8.91474 1.50745 8.8054 1.77447 8.80076L16.1065 8.80076L12.0834 4.77772C11.8924 4.58671 11.7851 4.32764 11.7851 4.05752C11.7851 3.78739 11.8924 3.52832 12.0834 3.33732C12.2744 3.14631 12.5335 3.039 12.8036 3.039C13.0738 3.039 13.3328 3.14631 13.5238 3.33732L19.2854 9.09893Z"
+											fill="#202020" />
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="rs-reviews__slider swiper">
+						<div class="rs-reviews__swiper swiper-wrapper">
+							<div class="rs-reviews__slide swiper-slide">
+								<div class="rs-reviews__item">
+									<a href="./img/license_img-1.jpg" data-fancybox="reviews-1">
+										<img src="./img/license_img-1.jpg" alt="">
+									</a>
+								</div>
+							</div>
+
+							<div class="rs-reviews__slide swiper-slide">
+								<div class="rs-reviews__item">
+									<a href="./img/license_img-1.jpg" data-fancybox="reviews-1">
+										<img src="./img/license_img-1.jpg" alt="">
+									</a>
+								</div>
+							</div>
+
+							<div class="rs-reviews__slide swiper-slide">
+								<div class="rs-reviews__item">
+									<a href="./img/license_img-1.jpg" data-fancybox="reviews-1">
+										<img src="./img/license_img-1.jpg" alt="">
+									</a>
+								</div>
+							</div>
+
+							<div class="rs-reviews__slide swiper-slide">
+								<div class="rs-reviews__item">
+									<a href="./img/license_img-1.jpg" data-fancybox="reviews-1">
+										<img src="./img/license_img-1.jpg" alt="">
+									</a>
+								</div>
+							</div>
+
+							<div class="rs-reviews__slide swiper-slide">
+								<div class="rs-reviews__item">
+									<a href="./img/license_img-1.jpg" data-fancybox="reviews-1">
+										<img src="./img/license_img-1.jpg" alt="">
+									</a>
+								</div>
+							</div>
+
+							<div class="rs-reviews__slide swiper-slide">
+								<div class="rs-reviews__item">
+									<a href="./img/license_img-1.jpg" data-fancybox="reviews-1">
+										<img src="./img/license_img-1.jpg" alt="">
+									</a>
+								</div>
+							</div>
+
+							<div class="rs-reviews__slide swiper-slide">
+								<div class="rs-reviews__item">
+									<a href="./img/license_img-1.jpg" data-fancybox="reviews-1">
+										<img src="./img/license_img-1.jpg" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<link rel="stylesheet" href="css/rs-news.css">
+			<section class="rs-news">
+				<div class="rs-news__container">
+					<div class="rs-news__head">
+						<div class="section-header">
+							<div class="section-header__icon">
+								<img src="./img/section-head_icon-4.svg" alt="">
+							</div>
+							<div class="section-header__title">
+								<h2><span class="cursive">Полезная</span> информация</h2>
+							</div>
+						</div>
+
+						<div class="rs-news__navigation swiper-navigation">
+							<div class="rs-news__buttons swiper-buttons">
+								<div class="rs-news__button-prev swiper-button-prev">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M1.0699 10.5393C0.878888 10.3483 0.77158 10.0892 0.77158 9.81906C0.77158 9.54893 0.878888 9.28987 1.0699 9.09886L6.83151 3.33725C7.02252 3.14624 7.28158 3.03893 7.55171 3.03893C7.82184 3.03893 8.0809 3.14624 8.27191 3.33725C8.46292 3.52825 8.57023 3.78732 8.57023 4.05745C8.57023 4.32757 8.46292 4.58664 8.27191 4.77765L4.24887 8.80069L18.5809 8.80069C18.8479 8.80533 19.1024 8.91466 19.2896 9.10514C19.4768 9.29561 19.5817 9.55199 19.5817 9.81906C19.5817 10.0861 19.4768 10.3425 19.2896 10.533C19.1024 10.7234 18.8479 10.8328 18.5809 10.8374L4.24887 10.8374L8.27191 14.8605C8.46292 15.0515 8.57023 15.3105 8.57023 15.5807C8.57023 15.8508 8.46292 16.1099 8.27191 16.3009C8.0809 16.4919 7.82184 16.5992 7.55171 16.5992C7.28158 16.5992 7.02252 16.4919 6.83151 16.3009L1.0699 10.5393Z"
+											fill="#202020" />
+									</svg>
+								</div>
+								<div class="rs-news__button-next swiper-button-next">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M19.2854 9.09893C19.4765 9.28994 19.5838 9.549 19.5838 9.81913C19.5838 10.0893 19.4765 10.3483 19.2854 10.5393L13.5238 16.3009C13.3328 16.4919 13.0738 16.5993 12.8036 16.5993C12.5335 16.5993 12.2744 16.4919 12.0834 16.3009C11.8924 16.1099 11.7851 15.8509 11.7851 15.5807C11.7851 15.3106 11.8924 15.0515 12.0834 14.8605L16.1065 10.8375L1.77447 10.8375C1.50745 10.8329 1.25293 10.7235 1.06574 10.533C0.878547 10.3426 0.773655 10.0862 0.773655 9.81913C0.773655 9.55206 0.878548 9.29569 1.06574 9.10521C1.25294 8.91474 1.50745 8.8054 1.77447 8.80076L16.1065 8.80076L12.0834 4.77772C11.8924 4.58671 11.7851 4.32764 11.7851 4.05752C11.7851 3.78739 11.8924 3.52832 12.0834 3.33732C12.2744 3.14631 12.5335 3.039 12.8036 3.039C13.0738 3.039 13.3328 3.14631 13.5238 3.33732L19.2854 9.09893Z"
+											fill="#202020" />
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="rs-news__slider swiper">
+						<div class="rs-news__swiper swiper-wrapper">
+							<div class="rs-news__slide swiper-slide">
+								<div class="rs-news__item">
+									<a href="#" class="rs-news__link">
+										<div class="rs-news__img">
+											<img src="./img/news_img-1.jpg" alt="">
+										</div>
+										<div class="rs-news__desc">
+											<div class="rs-news__date">24.02.2025</div>
+											<div class="rs-news__title">
+												<h5>Тренды на рынке труда в 2025 году</h5>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+
+							<div class="rs-news__slide swiper-slide">
+								<div class="rs-news__item">
+									<a href="#" class="rs-news__link">
+										<div class="rs-news__img">
+											<img src="./img/news_img-2.jpg" alt="">
+										</div>
+										<div class="rs-news__desc">
+											<div class="rs-news__date">24.02.2025</div>
+											<div class="rs-news__title">
+												<h5>Онлайн-обучение рабочим профессиям: быстрый путь к востребованной
+													специальности</h5>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+
+							<div class="rs-news__slide swiper-slide">
+								<div class="rs-news__item">
+									<a href="#" class="rs-news__link">
+										<div class="rs-news__img">
+											<img src="./img/news_img-3.jpg" alt="">
+										</div>
+										<div class="rs-news__desc">
+											<div class="rs-news__date">24.02.2025</div>
+											<div class="rs-news__title">
+												<h5>С 1 марта 2025 года обязательная сертификация для специалистов по
+													пожарной безопасности</h5>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+
+							<div class="rs-news__slide swiper-slide">
+								<div class="rs-news__item">
+									<a href="#" class="rs-news__link">
+										<div class="rs-news__img">
+											<img src="./img/news_img-4.jpg" alt="">
+										</div>
+										<div class="rs-news__desc">
+											<div class="rs-news__date">24.02.2025</div>
+											<div class="rs-news__title">
+												<h5>Профессиональное обучение рабочим специальностям</h5>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+
+							<div class="rs-news__slide swiper-slide">
+								<div class="rs-news__item">
+									<a href="#" class="rs-news__link">
+										<div class="rs-news__img">
+											<img src="./img/news_img-1.jpg" alt="">
+										</div>
+										<div class="rs-news__desc">
+											<div class="rs-news__date">24.02.2025</div>
+											<div class="rs-news__title">
+												<h5>Тренды на рынке труда в 2025 году</h5>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+
+							<div class="rs-news__slide swiper-slide">
+								<div class="rs-news__item">
+									<a href="#" class="rs-news__link">
+										<div class="rs-news__img">
+											<img src="./img/news_img-2.jpg" alt="">
+										</div>
+										<div class="rs-news__desc">
+											<div class="rs-news__date">24.02.2025</div>
+											<div class="rs-news__title">
+												<h5>Онлайн-обучение рабочим профессиям: быстрый путь к востребованной
+													специальности</h5>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+
+							<div class="rs-news__slide swiper-slide">
+								<div class="rs-news__item">
+									<a href="#" class="rs-news__link">
+										<div class="rs-news__img">
+											<img src="./img/news_img-3.jpg" alt="">
+										</div>
+										<div class="rs-news__desc">
+											<div class="rs-news__date">24.02.2025</div>
+											<div class="rs-news__title">
+												<h5>С 1 марта 2025 года обязательная сертификация для специалистов по
+													пожарной безопасности</h5>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+
+							<div class="rs-news__slide swiper-slide">
+								<div class="rs-news__item">
+									<a href="#" class="rs-news__link">
+										<div class="rs-news__img">
+											<img src="./img/news_img-4.jpg" alt="">
+										</div>
+										<div class="rs-news__desc">
+											<div class="rs-news__date">24.02.2025</div>
+											<div class="rs-news__title">
+												<h5>Профессиональное обучение рабочим специальностям</h5>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<link rel="stylesheet" href="css/rs-form.css">
+			<section class="rs-form">
+				<div class="rs-form__container">
+					<div class="rs-form__row">
+						<div class="rs-form__request">
+							<h2>Не знаете, с чего начать? <span class="cursive">Мы на связи!</span></h2>
+
+							<div class="rs-form__form form">
+								<form action="#" method="post" class="form__form">
+									<div class="form__wrapper">
+										<div class="form__block">
+											<div class="form__line">
+												<input type="text" name="form[]" required class="rs-input"
+													placeholder="Ваше имя">
+											</div>
+
+											<div class="form__row">
+												<div class="form__line">
+													<input type="email" name="form[]" required class="rs-input"
+														placeholder="E-mail">
+												</div>
+
+												<div class="form__line">
+													<input type="tel" name="form[]" required class="rs-input"
+														placeholder="Телефон">
+												</div>
+											</div>
+
+											<div class="form__line">
+												<textarea name="form[]" class="rs-input"
+													placeholder="Ваше сообщение"></textarea>
+											</div>
+
+											<div class="form__footer">
+												<div class="form__agreement">
+													Нажимая на кнопку вы даете согласие на обработку персональных данных
+													в соответствии с <a href="#">пользовательским соглашением</a>
+												</div>
+
+												<div class="form__button">
+													<button type="submit" class="rs-btn _btn-second">Оставить
+														заявку</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<div class="rs-form__img">
+							<img src="./img/form_img-1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<link rel="stylesheet" href="css/rs-footer.css">
+		<footer>
+			<div class="rs-footer">
+				<div class="rs-footer__container">
+					<div class="rs-footer__top">
+						<div class="rs-footer__logo">
+							<a href="#">
+								<img src="./img/logo.svg" alt="">
+							</a>
+						</div>
+
+						<div class="rs-footer__contact">
+							<ul>
+								<li>
+									<a href="tel:70000000000">
+										<svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M7.53478 2.94546C8.67778 3.77846 9.56778 4.91546 10.3278 6.00346L10.7698 6.64746L11.1868 7.26246C11.3954 7.56719 11.4845 7.93801 11.4373 8.30426C11.3901 8.67051 11.2098 9.00659 10.9308 9.24846L8.97978 10.6975C8.88552 10.7655 8.81917 10.8655 8.79306 10.9788C8.76694 11.0921 8.78283 11.211 8.83778 11.3135C9.27978 12.1165 10.0658 13.3125 10.9658 14.2125C11.8668 15.1125 13.1188 15.9505 13.9778 16.4425C14.0855 16.5029 14.2123 16.5198 14.332 16.4897C14.4518 16.4596 14.5555 16.3847 14.6218 16.2805L15.8918 14.3475C16.1253 14.0373 16.4697 13.8295 16.853 13.7676C17.2362 13.7058 17.6285 13.7946 17.9478 14.0155L18.6108 14.4745C19.8498 15.3345 21.1808 16.3115 22.1988 17.6145C22.3602 17.8223 22.4629 18.0696 22.4962 18.3306C22.5294 18.5917 22.492 18.8568 22.3878 19.0985C21.5508 21.0515 19.4328 22.7145 17.2298 22.6335L16.9298 22.6165L16.6968 22.5965L16.4388 22.5665L16.1578 22.5285L15.8528 22.4785C15.7994 22.4688 15.746 22.4588 15.6928 22.4485L15.3568 22.3765C15.298 22.3636 15.2393 22.3502 15.1808 22.3365L14.8148 22.2425L14.4298 22.1325L14.0278 22.0025C12.1818 21.3765 9.83878 20.1465 7.43478 17.7425C5.03178 15.3395 3.80178 12.9965 3.17578 11.1505L3.04578 10.7485L2.93578 10.3635L2.84178 9.99746L2.76378 9.65146C2.74125 9.54309 2.72025 9.43442 2.70078 9.32546L2.65078 9.02046L2.61078 8.73946L2.58178 8.48146L2.56178 8.24846L2.54578 7.94846C2.46478 5.75246 4.14578 3.61946 6.08978 2.78646C6.32376 2.68543 6.57998 2.64696 6.83331 2.67484C7.08664 2.70271 7.32837 2.79597 7.53478 2.94546ZM15.6698 6.54046L15.7858 6.55346C16.5137 6.68186 17.1823 7.0374 17.6957 7.56914C18.2091 8.10087 18.541 8.7815 18.6438 9.51346C18.6804 9.76664 18.6187 10.0242 18.4712 10.2333C18.3237 10.4423 18.1017 10.5868 17.8509 10.6372C17.6001 10.6875 17.3395 10.6398 17.1228 10.5039C16.9061 10.368 16.7497 10.1542 16.6858 9.90646L16.6628 9.79146C16.6225 9.50456 16.5001 9.23545 16.3102 9.01664C16.1203 8.79784 15.8712 8.6387 15.5928 8.55846L15.4378 8.52346C15.1867 8.47895 14.9621 8.3402 14.8099 8.13556C14.6577 7.93093 14.5894 7.67589 14.6191 7.4226C14.6487 7.16932 14.774 6.93692 14.9693 6.77294C15.1646 6.60897 15.4152 6.5258 15.6698 6.54046ZM15.6778 3.50046C17.2691 3.50046 18.7952 4.1326 19.9204 5.25782C21.0456 6.38304 21.6778 7.90916 21.6778 9.50046C21.6775 9.75534 21.5799 10.0005 21.4049 10.1858C21.23 10.3712 20.9908 10.4827 20.7364 10.4976C20.4819 10.5126 20.2314 10.4298 20.0359 10.2662C19.8405 10.1026 19.7149 9.87055 19.6848 9.61746L19.6778 9.50046C19.6782 8.48488 19.292 7.50722 18.5978 6.76599C17.9035 6.02475 16.9532 5.57551 15.9398 5.50946L15.6778 5.50046C15.4126 5.50046 15.1582 5.3951 14.9707 5.20757C14.7831 5.02003 14.6778 4.76568 14.6778 4.50046C14.6778 4.23524 14.7831 3.98089 14.9707 3.79335C15.1582 3.60582 15.4126 3.50046 15.6778 3.50046Z"
+												fill="var(--primary-color)" />
+										</svg>
+										+7 (000) 000-00-00
+									</a>
+								</li>
+								<li>
+									<a href="tel:70000000000">
+										<svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M7.53478 2.94546C8.67778 3.77846 9.56778 4.91546 10.3278 6.00346L10.7698 6.64746L11.1868 7.26246C11.3954 7.56719 11.4845 7.93801 11.4373 8.30426C11.3901 8.67051 11.2098 9.00659 10.9308 9.24846L8.97978 10.6975C8.88552 10.7655 8.81917 10.8655 8.79306 10.9788C8.76694 11.0921 8.78283 11.211 8.83778 11.3135C9.27978 12.1165 10.0658 13.3125 10.9658 14.2125C11.8668 15.1125 13.1188 15.9505 13.9778 16.4425C14.0855 16.5029 14.2123 16.5198 14.332 16.4897C14.4518 16.4596 14.5555 16.3847 14.6218 16.2805L15.8918 14.3475C16.1253 14.0373 16.4697 13.8295 16.853 13.7676C17.2362 13.7058 17.6285 13.7946 17.9478 14.0155L18.6108 14.4745C19.8498 15.3345 21.1808 16.3115 22.1988 17.6145C22.3602 17.8223 22.4629 18.0696 22.4962 18.3306C22.5294 18.5917 22.492 18.8568 22.3878 19.0985C21.5508 21.0515 19.4328 22.7145 17.2298 22.6335L16.9298 22.6165L16.6968 22.5965L16.4388 22.5665L16.1578 22.5285L15.8528 22.4785C15.7994 22.4688 15.746 22.4588 15.6928 22.4485L15.3568 22.3765C15.298 22.3636 15.2393 22.3502 15.1808 22.3365L14.8148 22.2425L14.4298 22.1325L14.0278 22.0025C12.1818 21.3765 9.83878 20.1465 7.43478 17.7425C5.03178 15.3395 3.80178 12.9965 3.17578 11.1505L3.04578 10.7485L2.93578 10.3635L2.84178 9.99746L2.76378 9.65146C2.74125 9.54309 2.72025 9.43442 2.70078 9.32546L2.65078 9.02046L2.61078 8.73946L2.58178 8.48146L2.56178 8.24846L2.54578 7.94846C2.46478 5.75246 4.14578 3.61946 6.08978 2.78646C6.32376 2.68543 6.57998 2.64696 6.83331 2.67484C7.08664 2.70271 7.32837 2.79597 7.53478 2.94546ZM15.6698 6.54046L15.7858 6.55346C16.5137 6.68186 17.1823 7.0374 17.6957 7.56914C18.2091 8.10087 18.541 8.7815 18.6438 9.51346C18.6804 9.76664 18.6187 10.0242 18.4712 10.2333C18.3237 10.4423 18.1017 10.5868 17.8509 10.6372C17.6001 10.6875 17.3395 10.6398 17.1228 10.5039C16.9061 10.368 16.7497 10.1542 16.6858 9.90646L16.6628 9.79146C16.6225 9.50456 16.5001 9.23545 16.3102 9.01664C16.1203 8.79784 15.8712 8.6387 15.5928 8.55846L15.4378 8.52346C15.1867 8.47895 14.9621 8.3402 14.8099 8.13556C14.6577 7.93093 14.5894 7.67589 14.6191 7.4226C14.6487 7.16932 14.774 6.93692 14.9693 6.77294C15.1646 6.60897 15.4152 6.5258 15.6698 6.54046ZM15.6778 3.50046C17.2691 3.50046 18.7952 4.1326 19.9204 5.25782C21.0456 6.38304 21.6778 7.90916 21.6778 9.50046C21.6775 9.75534 21.5799 10.0005 21.4049 10.1858C21.23 10.3712 20.9908 10.4827 20.7364 10.4976C20.4819 10.5126 20.2314 10.4298 20.0359 10.2662C19.8405 10.1026 19.7149 9.87055 19.6848 9.61746L19.6778 9.50046C19.6782 8.48488 19.292 7.50722 18.5978 6.76599C17.9035 6.02475 16.9532 5.57551 15.9398 5.50946L15.6778 5.50046C15.4126 5.50046 15.1582 5.3951 14.9707 5.20757C14.7831 5.02003 14.6778 4.76568 14.6778 4.50046C14.6778 4.23524 14.7831 3.98089 14.9707 3.79335C15.1582 3.60582 15.4126 3.50046 15.6778 3.50046Z"
+												fill="var(--primary-color)" />
+										</svg>
+										+7 (000) 000-00-00
+									</a>
+								</li>
+								<li>
+									<a href="mailto:mail@mail.ru">
+										<svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M2.74769 5.982L11.6227 14.858C11.8852 15.1207 12.2359 15.2767 12.6069 15.2957C12.9778 15.3148 13.3426 15.1955 13.6307 14.961L13.7447 14.858L22.6137 5.988C22.6427 6.098 22.6617 6.21 22.6717 6.325L22.6797 6.5V18.5C22.6798 19.0046 22.4893 19.4906 22.1462 19.8605C21.8031 20.2305 21.3328 20.4572 20.8297 20.495L20.6797 20.5H4.67969C4.17511 20.5002 3.68912 20.3096 3.31914 19.9665C2.94916 19.6234 2.72253 19.1532 2.68469 18.65L2.67969 18.5V6.5C2.67969 6.38 2.68969 6.264 2.70969 6.15L2.74769 5.982ZM20.6797 4.5C20.8007 4.5 20.9197 4.51 21.0347 4.531L21.2047 4.57L12.6847 13.09L4.16169 4.568C4.27169 4.538 4.38569 4.518 4.50169 4.508L4.67969 4.5H20.6797Z"
+												fill="var(--primary-color)" />
+										</svg>
+										mail@mail.ru
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="rs-footer__social">
+							<ul>
+								<li>
+									<a href="#">
+										<svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M15.5 0C6.93935 0 0 6.93935 0 15.5C0 18.4295 0.81375 21.173 2.2289 23.5104L0.8463 28.21C0.766916 28.4798 0.761693 28.766 0.831179 29.0386C0.900665 29.3111 1.04229 29.5599 1.24118 29.7588C1.44006 29.9577 1.68885 30.0993 1.9614 30.1688C2.23394 30.2383 2.52017 30.2331 2.79 30.1537L7.4896 28.7711C9.90555 30.2329 12.6762 31.0038 15.5 31C24.0606 31 31 24.0606 31 15.5C31 6.93935 24.0606 0 15.5 0ZM11.9939 19.0076C15.1295 22.1417 18.1226 22.5556 19.1797 22.5943C20.787 22.6532 22.3525 21.4256 22.9617 20.0012C23.0386 19.824 23.0665 19.6294 23.0425 19.4377C23.0185 19.246 22.9435 19.0643 22.8253 18.9115C21.9759 17.8265 20.8274 17.0469 19.7052 16.2719C19.4708 16.1099 19.1829 16.0449 18.9017 16.0906C18.6206 16.1362 18.368 16.289 18.197 16.5168L17.267 17.935C17.2181 18.0113 17.1419 18.066 17.054 18.0879C16.9661 18.1098 16.8732 18.0972 16.7943 18.0528C16.1634 17.6917 15.2443 17.0779 14.584 16.4176C13.9236 15.7573 13.3471 14.88 13.0231 14.2894C12.9829 14.2144 12.9713 14.1274 12.9904 14.0444C13.0095 13.9615 13.058 13.8883 13.1269 13.8384L14.5591 12.7751C14.7635 12.5974 14.8954 12.3507 14.9297 12.082C14.964 11.8134 14.8983 11.5415 14.7451 11.3181C14.0507 10.3013 13.2416 9.0086 12.0683 8.15145C11.9169 8.04171 11.7395 7.97329 11.5536 7.95291C11.3677 7.93252 11.1797 7.96088 11.0081 8.0352C9.5821 8.6459 8.3483 10.2114 8.4072 11.8218C8.44595 12.8789 8.8598 15.872 11.9939 19.0076Z"
+												fill="var(--primary-color)" />
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<svg width="31" height="27" viewBox="0 0 31 27" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M27.7889 0.184715C28.1701 0.0211598 28.5873 -0.0352494 28.9971 0.0213583C29.4068 0.0779661 29.7943 0.245522 30.119 0.506585C30.4437 0.767649 30.6939 1.11268 30.8434 1.50576C30.993 1.89884 31.0364 2.3256 30.9693 2.74162L27.4712 24.3747C27.1319 26.4614 24.8862 27.6581 23.0091 26.6187C21.4389 25.7491 19.1069 24.4093 17.0092 23.0113C15.9604 22.3115 12.7476 20.0707 13.1425 18.4762C13.4818 17.1128 18.8801 11.9896 21.9649 8.94361C23.1757 7.74693 22.6235 7.0566 21.1937 8.15735C17.6431 10.8904 11.9425 15.0465 10.0577 16.2165C8.39501 17.2481 7.52819 17.4242 6.49171 17.2481C4.60075 16.9273 2.84706 16.4303 1.41573 15.8249C-0.518413 15.0072 -0.424328 12.2962 1.41419 11.5068L27.7889 0.184715Z"
+												fill="var(--primary-color)" />
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="rs-footer__middle">
+						<div class="rs-footer__spollers">
+							<div class="rs-footer__spollers_item">
+								<h5 class="rs-footer__spollers_title">Наши курсы</h5>
+								<div class="rs-footer__spollers_body">
+									<ul>
+										<li><a href="#">Профессиональная переподготовка</a></li>
+										<li><a href="#">Обучение рабочим профессиям</a></li>
+										<li><a href="#">Обучение к лицензии МЧС</a></li>
+										<li><a href="#">Пожарная безопасность</a></li>
+										<li><a href="#">Промышленная безопасность</a></li>
+										<li><a href="#">Проверка знаний по электробезопасности и тепловым
+												энергоустановкам</a></li>
+										<li><a href="#">Гражданская оборона и защита от ЧС</a></li>
+										<li><a href="#">Повышение квалификации</a></li>
+										<li><a href="#">Безопасность работ на высоте</a></li>
+										<li><a href="#">Работы в ограниченных и замкнутых пространствах</a></li>
+										<li><a href="#">Обучение по охране труда</a></li>
+										<li><a href="#">Оказание первой помощи</a></li>
+										<li><a href="#">Экологическая безопасность</a></li>
+										<li><a href="#">Радиационная безопасность</a></li>
+										<li><a href="#">Подготовка членов добровольных пожарных дружин</a></li>
+										<li><a href="#">Безопасность на транспорте</a></li>
+										<li><a href="#">Безопасность подъёмных сооружений</a></li>
+										<li><a href="#">Социальные проекты</a></li>
+										<li><a href="#">Аттестация проектировщиков по пожарной безопасности</a></li>
+										<li><a href="#">Внесение документов в ФИС ФРДО</a></li>
+										<li><a href="#">Курсы целевого назначения (КЦН)</a></li>
+										<li><a href="#">Правовые основы деятельности медицинских работников</a></li>
+									</ul>
+								</div>
+								<div class="rs-footer__spollers_bg">
+									<img src="./img/footer_icon-1.svg" alt="">
+								</div>
+							</div>
+
+							<div class="rs-footer__spollers_item">
+								<h5 class="rs-footer__spollers_title">ООО «УЦ Содействие Кадрам»</h5>
+								<div class="rs-footer__spollers_body">
+									<ul>
+										<li>
+											ИНН 7814845546​​​​​​​ <br>
+											КПП 781401001 <br>
+											ОГРН 1247800111404
+										</li>
+									</ul>
+								</div>
+								<div class="rs-footer__spollers_bg">
+									<img src="./img/footer_icon-2.svg" alt="">
+								</div>
+							</div>
+
+							<div class="rs-footer__spollers_item">
+								<h5 class="rs-footer__spollers_title">Адрес и режим работы</h5>
+								<div class="rs-footer__spollers_body">
+									<ul>
+										<li>197342, г. Санкт-Петербург, ул. Лисичанская, д. 6, офис 512</li>
+										<li>Пн-Пт: с 10:00 до 18:00</li>
+									</ul>
+								</div>
+								<div class="rs-footer__spollers_bg">
+									<img src="./img/footer_icon-3.svg" alt="">
+								</div>
+							</div>
+
+							<div class="rs-footer__spollers_item">
+								<h5 class="rs-footer__spollers_title">Меню</h5>
+								<div class="rs-footer__spollers_body">
+									<ul>
+										<li><a href="#">Главная</a></li>
+										<li><a href="#">Каталог программ</a></li>
+										<li><a href="#">О нас</a></li>
+										<li><a href="#">Информация</a></li>
+										<li><a href="#">Отзывы</a></li>
+										<li><a href="#">Контакты</a></li>
+									</ul>
+								</div>
+								<div class="rs-footer__spollers_bg">
+									<img src="./img/footer_icon-4.svg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="rs-footer__bottom">
+						<div class="rs-footer__copyright">
+							© ООО «УЦ Содействие Кадрам» 2025. Все права защищены.
+						</div>
+						<div class="rs-footer__dev">
+							Разработано в <a href="https://rosait.ru/" target="_blank">Россайт</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<script src="lib/swiper/swiper-bundle.min.js"></script>
+	<script src="js/rs-sliders-init.js"></script>
+	<script src="lib/fancybox/fancybox.umd.js"></script>
+	<script src="lib/aos/aos.js"></script>
+	<script>
+		window.addEventListener('load', () => {
+			AOS.init({ duration: 500, easing: "ease-out-quart", once: true });
+		});
+	</script>
+	<script src="js/rs-script.js"></script>
+
+</body>
+
+</html>

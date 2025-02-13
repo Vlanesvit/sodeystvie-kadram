@@ -1,0 +1,242 @@
+.swiper {
+	overflow: hidden;
+}
+
+.swiper-wrapper {
+	width: 100%;
+	height: 100%;
+	box-sizing: content-box;
+	display: flex;
+	position: relative;
+}
+
+.swiper-grid > .swiper-wrapper {
+	flex-wrap: wrap;
+}
+
+.swiper-vertical {
+	.swiper-wrapper {
+		flex-direction: column;
+	}
+}
+
+.swiper-autoheight {
+	.swiper-wrapper {
+		align-items: flex-start;
+	}
+}
+
+.swiper-initialized {
+	.swiper-slide {
+		flex-shrink: 0;
+		// transition-property: transform;
+	}
+}
+.swiper-android {
+	.swiper-slide,
+	.swiper-wrapper {
+		transform: translate3d(0px, 0, 0);
+	}
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	&:active,
+	&:focus {
+		outline: none !important;
+	}
+	&::-moz-focus-inner {
+		border: 0 !important;
+	}
+
+	&::after {
+		font-size: 0px;
+	}
+}
+
+.swiper-pagination-bullet {
+	&:active,
+	&:focus {
+		outline: none !important;
+	}
+	&::-moz-focus-inner {
+		border: 0 !important;
+	}
+}
+
+.swiper-button-lock {
+	display: none !important;
+}
+
+.swiper-pagination-lock {
+	display: none !important;
+}
+
+.swiper-button-disabled {
+	opacity: 1 !important;
+	background-color: #dee7ed !important;
+}
+
+//========================================================================================================================================================
+.swiper-navigation {
+	display: flex;
+	align-items: center;
+	gap: 26px;
+	padding: 0px 30px;
+
+	@media (max-width: 1439.98px) {
+		padding: 0%;
+		gap: 15px;
+	}
+}
+
+.swiper-buttons {
+	display: flex;
+
+	& > * {
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+}
+
+// nav
+.swiper-button-next,
+.swiper-button-prev {
+	position: relative;
+	top: 0%;
+	width: 64px;
+	height: 40px;
+	margin-top: 30px;
+	z-index: 10;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	transition: all 0.3s ease 0s;
+	background-color: var(--primary-color);
+	overflow: hidden;
+
+	@media (max-width: 1439.98px) {
+		width: 54px;
+		height: 30px;
+	}
+
+	@media (max-width: 1169.98px) {
+		width: 44px;
+		height: 26px;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 20px;
+		height: 20px;
+		background-color: var(--second-color);
+		border-radius: 50%;
+		opacity: 0;
+		transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+		z-index: -1;
+	}
+
+	svg {
+		width: 24px;
+		height: 24px;
+
+		@media (max-width: 1439.98px) {
+			width: 20px;
+			height: 20px;
+		}
+
+		@media (max-width: 1169.98px) {
+			width: 16px;
+			height: 16px;
+		}
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			svg {
+				animation: spin 1s linear infinite;
+			}
+
+			&::after {
+				width: 100px;
+				height: 100px;
+				opacity: 1;
+			}
+		}
+	}
+
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		25% {
+			transform: rotate(-8deg);
+		}
+
+		50% {
+			transform: rotate(0deg);
+		}
+
+		75% {
+			transform: rotate(8deg);
+		}
+
+		100% {
+			transform: rotate(0deg);
+		}
+	}
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+	left: 0px;
+	right: 0px;
+	border-radius: 40px 0 0 40px;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+	right: 0px;
+	left: 0px;
+	border-radius: 0 40px 40px 0;
+}
+
+//========================================================================================================================================================
+.swiper-pagination {
+	position: relative;
+	text-align: center;
+	transition: 0.3s opacity;
+	transform: translate3d(0, 0, 0);
+	z-index: 10;
+	margin-top: 30px;
+}
+
+.swiper-horizontal > .swiper-pagination-progressbar,
+.swiper-pagination-progressbar.swiper-pagination-horizontal,
+.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
+.swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+	width: 100%;
+	height: 2px;
+	left: 0;
+	background-color: #dee7ed;
+	top: 0;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+	background: var(--primary-color);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transform: scale(0);
+	transform-origin: left top;
+}
