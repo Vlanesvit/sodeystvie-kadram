@@ -1,14 +1,49 @@
 section {
 	position: relative;
+	margin: 120px 0px;
+
+	@include responsive-auto(margin-top, (120, 40), (1599.98, 1439.98, 1169.98, 991.98));
+	@include responsive-auto(margin-bottom, (120, 40), (1599.98, 1439.98, 1169.98, 991.98));
 }
 
 // Text ========================================================================================================================================================
+.section-header {
+	display: flex;
+	align-items: flex-start;
+	gap: 24px;
+
+	@include responsive-auto(gap, (24, 16), (1599.98, 1439.98, 1169.98, 991.98));
+
+	// .section-header__icon
+	&__icon {
+		padding: 25px;
+		background: #fee2db;
+		border-radius: 50%;
+
+		@include responsive-auto(padding, (25, 10), (1599.98, 1439.98, 1169.98, 991.98));
+
+		img {
+			width: 45px;
+			height: 45px;
+			object-fit: contain;
+
+			@include responsive-auto(width, (45, 25), (1599.98, 1439.98, 1169.98, 991.98));
+			@include responsive-auto(height, (45, 25), (1599.98, 1439.98, 1169.98, 991.98));
+		}
+	}
+
+	// .section-header__title
+	&__title {
+	}
+}
+
 .cursive {
 	font-family: "Caveat", sans-serif;
 	color: var(--primary-color);
 	font-weight: 400;
 	// line-height: 141px;
 	line-height: 110%;
+	display: block;
 }
 
 h1 {
@@ -17,8 +52,14 @@ h1 {
 	// line-height: 75px;
 	line-height: 110%;
 
+	@include responsive-auto(font-size, (68, 28), (1599.98, 1439.98, 1169.98, 991.98));
+
 	.cursive {
 		font-size: 128px;
+		margin-bottom: -35px;
+
+		@include responsive-auto(font-size, (128, 54), (1599.98, 1439.98, 1169.98, 991.98));
+		@include responsive-auto(margin-bottom, (-35, -10), (1599.98, 1439.98, 1169.98, 991.98));
 	}
 }
 
@@ -29,8 +70,14 @@ h2 {
 	line-height: 110%;
 	color: #202020;
 
+	@include responsive-auto(font-size, (48, 18), (1439.98, 1169.98, 991.98));
+
 	.cursive {
 		font-size: 88px;
+		margin-bottom: -14px;
+
+		@include responsive-auto(font-size, (88, 34), (1439.98, 1169.98, 991.98));
+		@include responsive-auto(margin-bottom, (-14, -5), (1599.98, 1439.98, 1169.98, 991.98));
 	}
 }
 
@@ -40,6 +87,8 @@ h3 {
 	// line-height: 38px;
 	line-height: 120%;
 	letter-spacing: 0.03em;
+
+	@include responsive-auto(font-size, (48, 18), (1439.98, 1169.98, 991.98));
 }
 
 h4 {
@@ -48,6 +97,8 @@ h4 {
 	// line-height: 25px;
 	line-height: 120%;
 	letter-spacing: 0.03em;
+
+	@include responsive-auto(font-size, (21, 18), (1439.98, 1169.98, 991.98));
 }
 
 h5 {
@@ -57,6 +108,17 @@ h5 {
 	line-height: 150%;
 	letter-spacing: 0.03em;
 	color: #30313d;
+
+	@include responsive-auto(font-size, (21, 18), (1439.98, 1169.98, 991.98));
+}
+
+h6 {
+	font-weight: 500;
+	font-size: 18px;
+	// line-height: 27px;
+	line-height: 150%;
+
+	@include responsive-auto(font-size, (18, 17), (991.98));
 }
 
 p {
@@ -65,6 +127,8 @@ p {
 	// line-height: 34px;
 	line-height: 172%;
 	color: #30313d;
+
+	@include responsive-auto(font-size, (20, 14), (1439.98, 1169.98, 991.98));
 }
 
 // Button ========================================================================================================================================================
@@ -77,15 +141,143 @@ p {
 	justify-content: center;
 	text-align: center;
 	z-index: 10;
-	transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
-	padding: 15px 24px;
+	padding: 18px 24px;
 	font-weight: 500;
 	font-size: 18px;
+	border-radius: 50px;
+	border: 1px solid transparent;
+
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 0;
+		padding-top: 100%;
+		border-radius: 50%;
+		transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+		z-index: -1;
+		transform: translateY(100%);
+	}
 
 	&._btn-second {
-		background-color: var(--second-color);
+		border-color: var(--second-color);
+		background-color: transparent;
 		color: #fff;
+
+		&::after {
+			background-color: var(--second-color);
+			transform: translateY(0%);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--second-color);
+
+				&::after {
+					transform: translateY(-100%);
+				}
+			}
+		}
+	}
+
+	&._btn-primary-opacity {
+		background-color: #fee2db;
+
+		&::after {
+			background-color: var(--primary-color);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+
+				&::after {
+					transform: translateY(0%);
+				}
+			}
+		}
+	}
+
+	&._btn-gray {
+		background-color: #e2ebff;
+
+		&::after {
+			background-color: var(--second-color);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+
+				&::after {
+					transform: translateY(0%);
+				}
+			}
+		}
+	}
+
+	&._btn-arrow {
+		overflow: visible;
+		margin-left: 58px;
+		color: #fff;
+
+		&::after {
+			background-color: var(--second-color);
+			padding-top: 0px;
+			right: 0;
+			height: 100%;
+			width: 100%;
+			border-radius: inherit;
+			transform: translateY(0%);
+		}
+
+		.rs-btn {
+			&__arrow {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: inherit;
+				width: 54px;
+				margin-right: 4px;
+				position: absolute;
+				right: 100%;
+				height: 100%;
+				background-color: var(--second-color);
+				transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+				svg {
+					path {
+						transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+					}
+				}
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				.rs-btn {
+					&__arrow {
+						background-color: #e2ebff;
+						transform: translate3d(12px, 0px, 0px) scale3d(0.9, 0.9, 1) rotateX(0deg) rotateY(0deg)
+							rotateZ(0deg) skew(0deg, 0deg);
+						transform-style: preserve-3d;
+
+						svg {
+							path {
+								fill: var(--second-color);
+							}
+						}
+					}
+				}
+
+				&::after {
+					width: calc(100% + 46px);
+				}
+			}
+		}
 	}
 }
 
@@ -113,12 +305,15 @@ p {
 		width: 100%;
 		position: relative;
 		margin-bottom: 20px;
+
+		@include responsive-auto(margin-bottom, (20, 10), (1439.98, 1169.98, 991.98));
 	}
 
 	&__footer {
 		margin-top: 20px;
 
 		@media (min-width: 991.98px) {
+			gap: 16px;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
@@ -126,11 +321,23 @@ p {
 	}
 
 	&__agreement {
+		max-width: 561px;
 		font-weight: 500;
 		font-size: 16px;
 		// line-height: 19px;
 		line-height: 120%;
 		color: #424242;
+
+		a {
+			text-decoration: underline;
+			text-decoration-skip-ink: none;
+
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
 	}
 
 	// .form__button
@@ -162,7 +369,17 @@ p {
 	border-radius: 50px;
 	background: #f2f6ff;
 
+	@include responsive-auto(padding-top, (32, 18), (1439.98, 1169.98, 991.98));
+	@include responsive-auto(padding-right, (40, 24), (1439.98, 1169.98, 991.98));
+	@include responsive-auto(padding-bottom, (32, 18), (1439.98, 1169.98, 991.98));
+	@include responsive-auto(padding-left, (40, 24), (1439.98, 1169.98, 991.98));
+
 	&::placeholder {
 		color: #4f4f4f;
 	}
+}
+
+textarea.rs-input {
+	min-height: 268px;
+	resize: none;
 }

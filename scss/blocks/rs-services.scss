@@ -1,0 +1,105 @@
+@import "../base/_mixin";
+
+.rs-services {
+	// .rs-services__container
+	&__container {
+	}
+
+	// .rs-services__wrapper
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 24px;
+
+		@include responsive-auto(gap, (36, 16), (1599.98, 1439.98, 1169.98, 991.98));
+
+		@media (max-width: 991.98px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (max-width: 767.98px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	.section-header {
+		@media (min-width: 991.98px) {
+			grid-column: 2 span;
+		}
+
+		// .section-header__title
+		&__title {
+			flex-grow: 1;
+			padding-right: 9.3%;
+			margin-top: -4px;
+
+			@media (max-width: 767.98px) {
+				padding-right: 0px;
+				margin-top: 0px;
+			}
+
+			.cursive {
+				margin-top: -22px;
+				margin-bottom: 0px;
+				
+				@include responsive-auto(margin-top, (-22, -5), (1599.98, 1439.98, 1169.98, 991.98));
+
+				@media (min-width: 991.98px) {
+					text-align: right;
+				}
+			}
+		}
+	}
+
+	// .rs-services__item
+	&__item {
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		gap: 24px;
+		padding: 36px;
+		border-radius: 16px;
+		background-color: #fff;
+		transition: all 0.3s ease 0s;
+
+		@include responsive-auto(padding, (36, 16), (1599.98, 1439.98, 1169.98, 991.98));
+		@include responsive-auto(gap, (36, 16), (1599.98, 1439.98, 1169.98, 991.98));
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--second-color);
+				color: #fff;
+			}
+		}
+	}
+
+	// .rs-services__img
+	&__img {
+		flex-shrink: 0;
+		padding: 14px;
+		background-color: #f2f6ff;
+		border-radius: 50%;
+
+		@include responsive-auto(padding, (14, 8), (1599.98, 1439.98, 1169.98, 991.98));
+
+		img {
+			width: 32px;
+			height: 32px;
+			object-fit: contain;
+
+			@include responsive-auto(width, (32, 24), (1599.98, 1439.98, 1169.98, 991.98));
+			@include responsive-auto(height, (32, 24), (1599.98, 1439.98, 1169.98, 991.98));
+		}
+	}
+
+	// .rs-services__desc
+	&__desc {
+		h4 {
+			letter-spacing: 0;
+
+			@include responsive-auto(font-size, (21, 16), (1439.98, 1169.98, 991.98));
+		}
+	}
+}

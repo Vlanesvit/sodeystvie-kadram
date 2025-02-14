@@ -1,0 +1,274 @@
+@import "../base/_mixin";
+
+.rs-license {
+	// .rs-license__container
+	&__container {
+	}
+
+	// .rs-license__wrapper
+	&__wrapper {
+		padding: 93px;
+		border-radius: 24px;
+		background: #fff;
+
+		@include responsive-auto(padding-top, (93, 16), (1599.98, 1439.98, 1169.98, 991.98));
+		@include responsive-auto(padding-right, (93, 16), (1599.98, 1439.98, 1169.98, 991.98));
+		@include responsive-auto(padding-bottom, (93, 16), (1599.98, 1439.98, 1169.98, 991.98));
+		@include responsive-auto(padding-left, (93, 16), (1599.98, 1439.98, 1169.98, 991.98));
+
+		@media (max-width: 991.98px) {
+			border-radius: 16px;
+		}
+	}
+
+	// .rs-license__tabs
+	&__tabs {
+		margin-top: 36px;
+
+		@include responsive-auto(margin-top, (36, 20), (1599.98, 1439.98, 1169.98, 991.98));
+
+		.tabs {
+			// .tabs__navigation
+			&__navigation {
+				display: flex;
+				justify-content: flex-end;
+				margin-bottom: -44px;
+
+				@media (min-width: 1439.98px) {
+					padding-right: 30px;
+				}
+
+				@include responsive-auto(margin-bottom, (-44, -20), (1599.98, 1439.98, 1169.98, 991.98));
+
+				@media (max-width: 991.98px) {
+					padding: 0px 16px;
+					margin: 0px -16px;
+					overflow-y: hidden;
+					justify-content: flex-start;
+					overflow-x: auto;
+
+					&::-webkit-scrollbar {
+						width: 0px;
+						height: 0px;
+					}
+				}
+			}
+
+			// .tabs__title
+			&__title {
+				padding: 24px 36px;
+				border: 2px solid #2063cc;
+				border-radius: 8px;
+				background: #fff;
+				font-weight: 500;
+				font-size: 20px;
+				// line-height: 24px;
+				line-height: 120%;
+				color: #202020;
+				transition: all 0.3s ease 0s;
+
+				@include responsive-auto(padding-top, (24, 16), (1599.98, 1439.98, 1169.98, 991.98));
+				@include responsive-auto(padding-right, (36, 16), (1599.98, 1439.98, 1169.98, 991.98));
+				@include responsive-auto(padding-bottom, (24, 16), (1599.98, 1439.98, 1169.98, 991.98));
+				@include responsive-auto(padding-left, (36, 16), (1599.98, 1439.98, 1169.98, 991.98));
+				@include responsive-auto(font-size, (20, 14), (1439.98, 1169.98, 991.98));
+
+				&:not(:last-child) {
+					margin-right: 10px;
+				}
+
+				&._tab-active {
+					background-color: var(--second-color);
+					color: #fff;
+				}
+
+				@media (max-width: 991.98px) {
+					flex: 1 1 auto;
+					white-space: nowrap;
+				}
+			}
+
+			// .tabs__content
+			&__content {
+				padding: 110px 45px 45px;
+				background: #f2f6ff;
+				border-radius: 24px;
+
+				@include responsive-auto(padding-top, (110, 40), (1599.98, 1439.98, 1169.98, 991.98));
+				@include responsive-auto(padding-right, (45, 16), (1599.98, 1439.98, 1169.98, 991.98));
+				@include responsive-auto(padding-bottom, (45, 16), (1599.98, 1439.98, 1169.98, 991.98));
+				@include responsive-auto(padding-left, (45, 16), (1599.98, 1439.98, 1169.98, 991.98));
+			}
+
+			// .tabs__body
+			&__body {
+				opacity: 0;
+				display: none;
+				transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+				transition-behavior: allow-discrete;
+
+				&._tab-active {
+					display: block;
+					opacity: 1;
+
+					@starting-style {
+						opacity: 0;
+					}
+				}
+			}
+		}
+	}
+
+	// .rs-license__content
+	&__content {
+	}
+
+	// .rs-license__row
+	&__row {
+		display: flex;
+		--g: 53px;
+		gap: var(--g);
+
+		@media (max-width: 991.98px) {
+			flex-direction: column;
+		}
+
+		@include responsive-auto(--g, (53, 16), (1599.98, 1439.98, 1169.98, 991.98));
+	}
+
+	// .rs-license__desc
+	&__desc {
+		@media (min-width: 991.98px) {
+			flex: 1 1 calc(50% - (var(--g) / 2));
+		}
+
+		& > * {
+			&:first-child {
+				margin-top: 0px !important;
+			}
+
+			&:last-child {
+				margin-bottom: 0px !important;
+			}
+		}
+
+		h3 {
+			margin: 16px 0px;
+
+			@include responsive-auto(margin-top, (16, 8), (1599.98, 1439.98, 1169.98, 991.98));
+			@include responsive-auto(margin-bottom, (16, 8), (1599.98, 1439.98, 1169.98, 991.98));
+		}
+
+		h5 {
+			margin-top: 32px;
+
+			@include responsive-auto(margin-top, (32, 16), (1599.98, 1439.98, 1169.98, 991.98));
+			@include responsive-auto(margin-bottom, (32, 16), (1599.98, 1439.98, 1169.98, 991.98));
+		}
+
+		p {
+			margin: 8px 0px;
+			// line-height: 30px;
+			line-height: 150%;
+			letter-spacing: 0.03em;
+		}
+
+		ul {
+			margin: 12px 0px;
+
+			@include responsive-auto(margin-top, (12, 8), (1599.98, 1439.98, 1169.98, 991.98));
+			@include responsive-auto(margin-bottom, (12, 8), (1599.98, 1439.98, 1169.98, 991.98));
+
+			li {
+				padding-left: 38px;
+				font-weight: 400;
+				font-size: 20px;
+				// line-height: 30px;
+				line-height: 150%;
+				letter-spacing: 0.03em;
+				color: #30313d;
+				position: relative;
+
+				@include responsive-auto(font-size, (20, 14), (1439.98, 1169.98, 991.98));
+				@include responsive-auto(padding-left, (38, 28), (1439.98, 1169.98, 991.98));
+
+				&:not(:last-child) {
+					margin-bottom: 12px;
+				}
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: 2px;
+					left: 0;
+					display: block;
+					background-image: url("../img/check.svg");
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: contain;
+					width: 26px;
+					height: 26px;
+
+					@include responsive-auto(width, (26, 20), (1599.98, 1439.98, 1169.98, 991.98));
+					@include responsive-auto(height, (26, 20), (1599.98, 1439.98, 1169.98, 991.98));
+				}
+			}
+		}
+
+		blockquote {
+			margin: 16px 0px;
+			padding: 40px;
+			background: #fff;
+			border-radius: 16px;
+
+			@include responsive-auto(padding, (40, 16), (1439.98, 1169.98, 991.98));
+			@include responsive-auto(margin-top, (16, 8), (1599.98, 1439.98, 1169.98, 991.98));
+			@include responsive-auto(margin-bottom, (16, 8), (1599.98, 1439.98, 1169.98, 991.98));
+
+			p {
+				letter-spacing: 0px;
+			}
+
+			.rs-btn {
+				margin-top: 14px;
+			}
+
+			& > * {
+				&:first-child {
+					margin-top: 0px !important;
+				}
+
+				&:last-child {
+					margin-bottom: 0px !important;
+				}
+			}
+		}
+	}
+
+	// .rs-license__img
+	&__img {
+		border-radius: 24px;
+		overflow: hidden;
+		background: #fff;
+
+		@media (min-width: 991.98px) {
+			flex: 1 1 calc(50% - (53px / 2));
+		}
+
+		@media (max-width: 991.98px) {
+			border-radius: 16px;
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+		}
+
+		img {
+			object-fit: contain;
+		}
+	}
+}

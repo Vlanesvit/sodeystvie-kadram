@@ -50,7 +50,7 @@ function menuFunction() {
 				let icon = document.createElement('button');
 				icon.setAttribute('type', 'button');
 				icon.classList.add('menu__dropdown_arrow')
-				item.append(icon);
+				item.prepend(icon);
 			});
 
 			// Функция для отдельных уровней меню, чтобы открывался только один пункт, а открытые закрывались, кроме тех, кто выше уровнем
@@ -209,33 +209,11 @@ Header при скролле
 ==================================== */
 function headerScroll() {
 	const header = document.querySelector('.rs-header');
-	let lastScrollTop = 0;
 
 	function headerClassAdd() {
 		header.classList.toggle('_header-scroll', window.scrollY > 0)
-		if (window.scrollY > 0) {
-			let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-			// Проверка на присутствие класса для бургер-меню. Если он есть, то шапка не скрывается
-			if (document.documentElement.classList.contains("menu-open")) {
-				header.style.transform = "0px";
-			}
-			else {
-				// Скрытие шапки
-				if (scrollTop > lastScrollTop) {
-					header.style.transform = `translateY(-10px)`;
-					header.classList.remove('_header-show');
-				} else {
-					header.style.transform = "translateY(0px)";
-					header.classList.add('_header-show');
-				}
-			}
-			lastScrollTop = scrollTop;
-		} else {
-			header.classList.remove('_header-show');
-		}
 	}
-
+	
 	window.addEventListener('scroll', function () {
 		headerClassAdd()
 	})

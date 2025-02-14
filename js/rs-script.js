@@ -55,6 +55,176 @@ Fancybox.bind("[data-fancybox]", {
 });
 
 /* ====================================
+Табы
+==================================== */
+/*
+Для родителя табов пишем атрибут data-tabs
+Для родителя заголовков табов пишем атрибут data-tabs-titles
+Для родителя блоков табов пишем атрибут data-tabs-body
+Для родителя блоков табов можно указать data-tabs-hash, это втключит добавление хеша
+
+Если нужно чтобы табы открывались с анимацией 
+добавляем к data-tabs data-tabs-animate
+По умолчанию, скорость анимации 500ms, 
+указать свою скорость можно так: data-tabs-animate="1000"
+
+Если нужно чтобы табы превращались в "спойлеры", на неком размере экранов, пишем параметры ширины.
+Например: data-tabs="992" - табы будут превращаться в спойлеры на экранах меньше или равно 992px
+*/
+function tabs() {
+	const tabs = document.querySelectorAll('[data-tabs]');
+	let tabsActiveHash = [];
+
+	// Получаем хэш из URL
+	const hash = getHash();
+	if (hash && hash.startsWith('tab-')) {
+		tabsActiveHash = hash.replace('tab-', '').split('-');
+	}
+
+	if (tabs.length > 0) {
+		resetTabs();
+		handleHashChange();
+
+		// Отслеживание изменения хэша
+		window.addEventListener('hashchange', handleHashChange);
+
+		tabs.forEach((tabsBlock, index) => {
+			tabsBlock.classList.add('_tab-init');
+			tabsBlock.setAttribute('data-tabs-index', index);
+			tabsBlock.addEventListener("click", setTabsAction);
+			initTabs(tabsBlock);
+		});
+	}
+
+	// Инициализация медиа-запросов
+	let mdQueriesArray = dataMediaQueries(tabs, "tabs");
+	if (mdQueriesArray && mdQueriesArray.length) {
+		mdQueriesArray.forEach(mdQueriesItem => {
+			mdQueriesItem.matchMedia.addEventListener("change", () => {
+				setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+			});
+			setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+		});
+	}
+
+	// Сброс вкладок
+	function resetTabs() {
+		document.querySelectorAll('._tab-active').forEach(el => el.classList.remove('_tab-active'));
+	}
+
+	// Функция обработки изменения хэша
+	function handleHashChange() {
+		const hash = getHash();
+		if (hash && hash.startsWith('tab-')) {
+			tabsActiveHash = hash.replace('tab-', '').split('-');
+			const tabsBlockIndex = tabsActiveHash[0];
+			const tabsTabIndex = tabsActiveHash[1];
+
+			const tabsBlock = document.querySelector(`[data-tabs-index="${tabsBlockIndex}"]`);
+			if (tabsBlock) {
+				const tabTitles = tabsBlock.querySelectorAll('[data-tabs-title]');
+				const tabItems = tabsBlock.querySelectorAll('[data-tabs-item]');
+
+				if (tabTitles[tabsTabIndex] && tabItems[tabsTabIndex]) {
+					tabsBlock.querySelectorAll('._tab-active').forEach(el => el.classList.remove('_tab-active'));
+					tabItems[tabsTabIndex].querySelectorAll('._tab-active').forEach(el => el.classList.remove('_tab-active'));
+					tabTitles[tabsTabIndex].classList.add('_tab-active');
+					tabItems[tabsTabIndex].classList.add('_tab-active');
+					// Плавный скролл к верху блока табов
+					tabsBlock.scrollIntoView({ behavior: "smooth", block: "start" });
+				}
+			}
+		}
+	}
+
+	// Инициализация табов
+	function initTabs(tabsBlock) {
+		const tabsTitles = tabsBlock.querySelectorAll('[data-tabs-titles] button');
+		const tabsContent = tabsBlock.querySelectorAll('[data-tabs-body]>*');
+		const tabsBlockIndex = tabsBlock.dataset.tabsIndex;
+		const tabsActiveHashBlock = tabsActiveHash[0] == tabsBlockIndex;
+
+		if (tabsTitles.length > 0 && tabsContent.length > 0) {
+			tabsContent.forEach((content, index) => {
+				if (tabsTitles[index]) {
+					tabsTitles[index].setAttribute('data-tabs-title', '');
+					content.setAttribute('data-tabs-item', '');
+
+					// Если хэш блока не совпадает, добавляем активный класс
+					if (!tabsActiveHashBlock && index === 0) {
+						tabsTitles[index].classList.add('_tab-active');
+						content.classList.add('_tab-active');
+					}
+
+					if (tabsActiveHashBlock && index == tabsActiveHash[1]) {
+						tabsTitles[index].classList.add('_tab-active');
+						content.classList.add('_tab-active');
+					}
+				}
+			});
+		}
+	}
+
+	// Расстановка заголовков по медиа-запросам
+	function setTitlePosition(tabsMediaArray, matchMedia) {
+		tabsMediaArray.forEach(tabsMediaItem => {
+			const tabsTitles = tabsMediaItem.item.querySelector('[data-tabs-titles]');
+			const tabsContent = tabsMediaItem.item.querySelector('[data-tabs-body]');
+			const tabTitles = Array.from(tabsMediaItem.item.querySelectorAll('[data-tabs-title]'));
+			const tabItems = Array.from(tabsMediaItem.item.querySelectorAll('[data-tabs-item]'));
+
+			if (matchMedia.matches) {
+				tabItems.forEach((content, index) => {
+					tabsContent.append(tabTitles[index]);
+					tabsContent.append(content);
+					tabsMediaItem.item.classList.add('_tab-spoller');
+				});
+			} else {
+				tabTitles.forEach((title, index) => {
+					tabsTitles.append(title);
+					tabsMediaItem.item.classList.remove('_tab-spoller');
+				});
+			}
+		});
+	}
+
+	// Обновление состояния табов
+	function setTabsStatus(tabsBlock) {
+		const tabsTitles = tabsBlock.querySelectorAll('[data-tabs-title]');
+		const tabsContent = tabsBlock.querySelectorAll('[data-tabs-item]');
+		const tabsBlockIndex = tabsBlock.dataset.tabsIndex;
+
+		tabsContent.forEach((content, index) => {
+			if (tabsTitles[index].classList.contains('_tab-active')) {
+				content.classList.add('_tab-active');
+				setHash(`tab-${tabsBlockIndex}-${index}`);
+			} else {
+				tabsTitles[index].classList.remove('_tab-active')
+				content.classList.remove('_tab-active');
+			}
+		});
+	}
+
+	// Обработка кликов по заголовкам табов
+	function setTabsAction(e) {
+		const tabTitle = e.target.closest('[data-tabs-title]');
+		if (tabTitle) {
+			const tabsBlock = tabTitle.closest('[data-tabs]');
+			if (!tabTitle.classList.contains('_tab-active') && !tabsBlock.querySelector('._slide')) {
+				tabsBlock.querySelectorAll('[data-tabs-title]._tab-active').forEach(item => item.classList.remove('_tab-active'));
+				tabTitle.classList.add('_tab-active');
+				setTabsStatus(tabsBlock);
+			}
+			e.preventDefault();
+			AOS.refresh()
+		}
+	}
+}
+if (document.querySelector('[data-tabs]')) {
+	tabs()
+}
+
+/* ====================================
 Добавить картинкам draggable="false"
 ==================================== */
 const imgs = document.getElementsByTagName('img');
